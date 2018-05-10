@@ -1,21 +1,21 @@
 public class Map {
-	private static int[][][] MAP_DATA;
+	private static boolean[][][] MAP_DATA;
 	private static int[][] PLAYER_1_SPAWN;
 	private static int[][] PLAYER_2_SPAWN;
 
 	public Map(int x, int y) {
-		MAP_DATA = new int[x][y][2];
+		MAP_DATA = new boolean[x][y][2];
 	}
 
 	public static void generateBarrier(int x, int y, int z) {
-		MAP_DATA[x][y][z] = 1;
+		MAP_DATA[x][y][z] = true;
 	}
 
-	public int[][][] getMapData() {
+	public boolean[][][] getMapData() {
 		return MAP_DATA;
 	}
 
-	public int getBarrier(int x, int y, int z) {
+	public boolean getBarrier(int x, int y, int z) {
 		return MAP_DATA[x][y][z];
 	}
 
