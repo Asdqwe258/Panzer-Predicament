@@ -1,5 +1,4 @@
-//Name:              Date:
-   import java.awt.*;
+ import java.awt.*;
    public class Ball extends Polkadot
    {
       private double dx;       // pixels to move each time step() is called.
@@ -7,9 +6,9 @@
       private int count = 0;
     // constructors
    
-      public Ball(double x, double y, double dia, Color c)
+      public Ball(double x, double y, double dia, Color c, int a)
       {
-         super(x, y, dia, c);
+         super(x, y, dia, c, a);
          dx = 0;
          dy = 3;
       }
@@ -37,8 +36,8 @@
      //instance methods
       public void move(double rightEdge, double bottomEdge)
       {
-         setX(getX()+ dx);                  // move horizontally
-         setY(getY()+ dy);
+         setX(getX()+ Math.cos(super.getAngle()*64)*dx);                  // move horizontally
+         setY(getY()+ Math.sin(super.getAngle()*64)*dy);
         	if(count>5)
       	{
       	setDiameter(0);
