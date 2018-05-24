@@ -107,7 +107,7 @@
 				if(getDiameter()!=5 && getDiameter()!=0)
 				{
 				ImageIcon tank = new ImageIcon("tank" + angle + ".png");
-				myBuffer.drawImage(tank.getImage(), (int)getX()-36, (int)getY()-36, null);
+				myBuffer.drawImage(tank.getImage(), (int)getX()-72, (int)getY()-72, null);
             buffer = myBuffer;
 				}
             
