@@ -70,13 +70,13 @@
 								 
          		}
             if(e.getKeyCode() == KeyEvent.VK_UP && pd.getY() > pd.getRadius()){
-                pd.setX(pd.getX()+ Math.cos((double)(pd.getAngle())/64 * (2 * Math.PI))*10);                  // move horizontally
-         pd.setY(pd.getY()+ Math.sin((double)(pd.getAngle())/64 * (2 * Math.PI))*10);
+                pd.setX(pd.getX()+ Math.sin((double)(pd.getAngle()-1)/64 * (-2 * Math.PI))*(-10));                  // move horizontally
+         pd.setY(pd.getY()+ Math.cos((double)(pd.getAngle()-1)/64 * (-2 * Math.PI))*(-10));
          }  
             if(e.getKeyCode() == KeyEvent.VK_DOWN && pd.getY() < FRAME - pd.getRadius()){
-                pd.setX(pd.getX()+ Math.cos((double)(pd.getAngle())/64 * (2 * Math.PI))*(-10));                  // move horizontally
+                pd.setX(pd.getX()+ Math.sin((double)(pd.getAngle()-1)/64 * (-2 * Math.PI))*(10));                  // move horizontally
         
-         pd.setY(pd.getY()+ Math.sin((double)(pd.getAngle())/64 * (2 * Math.PI))*(-10));
+         pd.setY(pd.getY()+ Math.cos((double)(pd.getAngle()-1)/64 * (-2 * Math.PI))*(10));
            }
             if(e.getKeyCode() == KeyEvent.VK_LEFT && pd.getX() > pd.getRadius())
                pd.setAngle( pd.getAngle() - 1);
