@@ -6,7 +6,7 @@
    import java.lang.Object;
    public class PrizePanel extends JPanel
    {
-      private static final int FRAME = 400;
+      private static final int FRAME = 400; //size of map
       private static final Color BACKGROUND = new Color(204, 204, 204);
       private BufferedImage myImage;
       private Graphics myBuffer;
@@ -70,16 +70,16 @@
 								 
          		}
             if(e.getKeyCode() == KeyEvent.VK_UP && pd.getY() > pd.getRadius()){
-                pd.setX(pd.getX()+ Math.sin((double)(pd.getAngle()-1)/64 * (-2 * Math.PI))*(-10));                  // move horizontally
-         pd.setY(pd.getY()+ Math.cos((double)(pd.getAngle()-1)/64 * (-2 * Math.PI))*(-10));
+                pd.setX(pd.getX()+ Math.sin((double)(pd.getAngle()-1)/64 * (-2 * Math.PI))*(-10));   // move horizontally
+         pd.setY(pd.getY()+ Math.cos((double)(pd.getAngle()-1)/64 * (-2 * Math.PI))*(-10)); //move vertically
          }  
             if(e.getKeyCode() == KeyEvent.VK_DOWN && pd.getY() < FRAME - pd.getRadius()){
-                pd.setX(pd.getX()+ Math.sin((double)(pd.getAngle()-1)/64 * (-2 * Math.PI))*(10));                  // move horizontally
+                pd.setX(pd.getX()+ Math.sin((double)(pd.getAngle()-1)/64 * (-2 * Math.PI))*(10)); // move horizontally
         
-         pd.setY(pd.getY()+ Math.cos((double)(pd.getAngle()-1)/64 * (-2 * Math.PI))*(10));
+         pd.setY(pd.getY()+ Math.cos((double)(pd.getAngle()-1)/64 * (-2 * Math.PI))*(10)); //move vertically
            }
             if(e.getKeyCode() == KeyEvent.VK_LEFT && pd.getX() > pd.getRadius())
-               pd.setAngle( pd.getAngle() - 1);
+               pd.setAngle( pd.getAngle() - 1); 
 
                
             if(e.getKeyCode() == KeyEvent.VK_RIGHT && pd.getX() < FRAME - pd.getRadius()){
