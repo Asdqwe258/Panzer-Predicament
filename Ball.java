@@ -34,7 +34,7 @@
       }
       
      //instance methods
-      public void move(double rightEdge, double bottomEdge)
+      public void move(double rightEdge, double bottomEdge) //Moves the ball, and makes sure that it doesn't move past the boundary
       {
          setX(getX()+ Math.cos(super.getAngle()*64)*dx);                  // move horizontally
          setY(getY()+ Math.sin(super.getAngle()*64)*dy);
