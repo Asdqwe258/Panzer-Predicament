@@ -100,8 +100,12 @@
                   ball.setY(pd.getY());
                   ball.setcount(0);
                   ball.setDiameter(5);
-                  ball.setdy((Math.cos((double)(pd.getAngle()-1)/64 * (-2 * Math.PI))*(-100)));
-						ball.setdx((Math.sin((double)(pd.getAngle()-1)/64 * (-2 * Math.PI))*(-100)));
+                  ball.setdy((-30)*(Math.cos((pd.getAngle()-1)/64.0 * (2 * Math.PI))));
+						System.out.println(ball.getdy());
+						System.out.println((Math.cos((pd.getAngle()-1)/64.0 * (2 * Math.PI))));
+						ball.setdx((30)*((Math.sin((pd.getAngle()-1)/64.0 * (2 * Math.PI)))));
+						System.out.println(ball.getdx());
+						System.out.println((Math.sin((pd.getAngle()-1)/64.0 * (2 * Math.PI))));
                   ball.setfirenum(0);
                }
                else if(ball2.getfirenum()==1)
