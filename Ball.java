@@ -48,9 +48,9 @@ firec=c;
      //instance methods
       public void move(double rightEdge, double bottomEdge) //Moves the ball, and makes sure that it doesn't move past the boundary
       {
-         setX(getX()- Math.sin((super.getAngle()-1)/64.0 * (-2 * Math.PI))* Math.abs(-dx));  
+         setX(getX()+ Math.abs(Math.sin(Math.toRadians(super.getAngle()-1)*5.625 ))* dx);  
 			//System.out.println("super" +super.getAngle());                // move horizontally
-         setY(getY()- Math.cos((super.getAngle()-1)/64.0 * (-2 * Math.PI))* Math.abs(dy));
+         setY(getY()+ Math.abs(Math.cos(Math.toRadians(super.getAngle()-1)*5.625 ))* dy);
             	if(count==6)
       	{
       	setDiameter(0);

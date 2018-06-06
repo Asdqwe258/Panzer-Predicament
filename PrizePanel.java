@@ -100,12 +100,8 @@
                   ball.setY(pd.getY());
                   ball.setcount(0);
                   ball.setDiameter(5);
-                  ball.setdy((-30)*(Math.cos((pd.getAngle()-1)/64.0 * (2 * Math.PI))));
-						System.out.println(ball.getdy());
-						System.out.println((Math.cos((pd.getAngle()-1)/64.0 * (2 * Math.PI))));
-						ball.setdx((30)*((Math.sin((pd.getAngle()-1)/64.0 * (2 * Math.PI)))));
-						System.out.println(ball.getdx());
-						System.out.println((Math.sin((pd.getAngle()-1)/64.0 * (2 * Math.PI))));
+                  ball.setdy((-10)*(Math.cos((pd.getAngle()-1)/64.0 * (2 * Math.PI))));
+						ball.setdx((10)*(Math.sin((pd.getAngle()-1)/64.0 * (2 * Math.PI))));
                   ball.setfirenum(0);
                }
                else if(ball2.getfirenum()==1)
@@ -151,13 +147,13 @@
 								 
          		}
             if(e.getKeyCode() == KeyEvent.VK_UP && pd.getY() > pd.getRadius()){
-                pd.setX(pd.getX()+ Math.sin((double)(pd.getAngle()-1)/64 * (-2 * Math.PI))*(-10));   // move horizontally
-         pd.setY(pd.getY()+ Math.cos((double)(pd.getAngle()-1)/64 * (-2 * Math.PI))*(-10)); //move vertically
+                pd.setX(pd.getX()+ Math.sin(Math.toRadians(pd.getAngle()-1)*5.625 )*(10));   // move horizontally
+         pd.setY(pd.getY()+ Math.cos(Math.toRadians(pd.getAngle()-1)*5.625 )*(-10)); //move vertically
          }  
             if(e.getKeyCode() == KeyEvent.VK_DOWN && pd.getY() < FRAME - pd.getRadius()){
-                pd.setX(pd.getX()+ Math.sin((double)(pd.getAngle()-1)/64 * (-2 * Math.PI))*(10)); // move horizontally
+                pd.setX(pd.getX()+ Math.sin(Math.toRadians(pd.getAngle()-1)*5.625 )*(-10)); // move horizontally
         
-         pd.setY(pd.getY()+ Math.cos((double)(pd.getAngle()-1)/64 * (-2 * Math.PI))*(10)); //move vertically
+         pd.setY(pd.getY()+ Math.cos(Math.toRadians(pd.getAngle()-1)*5.625 )*(10)); //move vertically
            }
             if(e.getKeyCode() == KeyEvent.VK_LEFT && pd.getX() > pd.getRadius())
                pd.setAngle( pd.getAngle() - 1); 
