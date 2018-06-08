@@ -363,7 +363,7 @@
       private void move(double speed){
 		//	if(isInWall)
 		}
-		private boolean isInWall(Map map, double x, double y){
+	private boolean isInWall(Map map, double x, double y){
 		for(int k = 0; k < map.getMapData().length; k++){
 			for(int i = 0; x < map.getMapData()[0].length; x++){
 				for(int o = 0; o < 2; o++){
