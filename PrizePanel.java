@@ -173,5 +173,30 @@
       {
          return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
       }
+      private void move(double speed){
+		//	if(isInWall)
+		}
+		private boolean isInWall(Map map, double x, double y){
+		for(int k = 0; k < map.getMapData().length; k++){
+			for(int i = 0; x < map.getMapData()[0].length; x++){
+				for(int o = 0; o < 2; o++){
+					if(map.getBarrier(k,i,o)){
+						if(o == 0){
+							if((x > k*(FRAME / map.getMapData().length) + (FRAME / map.getMapData().length) && x < k*(FRAME / map.getMapData().length) + 20 + (FRAME / map.getMapData().length)) && (y > i*(FRAME / map.getMapData()[0].length) && y < i*(FRAME / map.getMapData()[0].length) + (FRAME / map.getMapData()[0].length))){
+							return true;
+							}
+						}
+						if(o == 1){
+							if((y > i*(FRAME / map.getMapData()[0].length) + (FRAME / map.getMapData()[0].length) && y < i*(FRAME / map.getMapData()[0].length) + 20 + (FRAME / map.getMapData()[0].length)) && (x > k*(FRAME / map.getMapData().length) && x < k*(FRAME / map.getMapData().length) + (FRAME / map.getMapData().length))){
+   						return true;
+							}
+						}
+					}
+				}
+			}
+		}
+		return false;
+	}
+
    }
    }
