@@ -14,8 +14,9 @@
       private Color myColor; 
       private double myRadius;
       private int myAngle;
+      private int type;
      // constructors
-      public Polkadot()     //default constructor
+      public Polkadot(int x)     //default constructor
       {
          myX = 200;
          myY = 200;
@@ -23,6 +24,7 @@
          myColor = Color.RED;
          myRadius = myDiameter/2;
          myAngle = 1;
+         type = x;
          
       }
       public Polkadot(double x, double y, double d, Color c, int a)
@@ -102,17 +104,30 @@
       {
 		//String tankA = "tank.png";
       //tankA = (tankA.substring(0, 3) + angle + tankA.substring(3, 7));
+         
          myBuffer.setColor(myColor);
          myBuffer.fillOval((int)(getX() - getRadius()), (int)(getY()-getRadius()), (int)getDiameter(), (int)getDiameter());
-				if(getDiameter()!=5 && getDiameter()!=0)
+				if(type == 1){
+            if(getDiameter()!=5 && getDiameter()!=0)
 				{
 				ImageIcon tank = new ImageIcon("tank" + angle + ".png");
 				myBuffer.drawImage(tank.getImage(), (int)getX()-159, (int)getY()-163, null);
             buffer = myBuffer;
 				}
+            }
+            if(type == 2) {
+            if(getDiameter()!=5 && getDiameter()!=0)
+				{
+				ImageIcon tank = new ImageIcon("tank" + angle + ".png");
+				myBuffer.drawImage(tank.getImage(), (int)getX()-159, (int)getY()-163, null);
+            buffer = myBuffer;
+				}
+}
+
+            }
             
 
-      }
+      
       public Graphics getGraphics(){
       return buffer;
       }
