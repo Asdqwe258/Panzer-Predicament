@@ -10,14 +10,14 @@
       private static final Color BACKGROUND = new Color(204, 204, 204);
       private BufferedImage myImage;
       private Graphics myBuffer;
-      private Polkadot pd;
-      private Polkadot p2;
-       private Ball ball, ball2, ball3, ball4, ball5, ball6, ball7, ball8, ball9, ball10;
+      private Polkadot pd; //player1
+      private Polkadot p2;//player2
+       private Ball ball, ball2, ball3, ball4, ball5, ball6, ball7, ball8, ball9, ball10; //instantiates all the ammo
 
       private Timer w;
       private Timer w2;
-      public ImageIcon t;
-      public ImageIcon t2; 
+      public ImageIcon t;//Image icon for tank1
+      public ImageIcon t2;//Image icon for tank2 
       public int firec=1;
       int hits = 0;
       int hits2 = 0;
@@ -36,8 +36,8 @@
       	
          w = new Timer(0, new Listener());
          w.start();
-         pd = new Polkadot(1);
-         ball = new Ball(100, 100, 0, Color.BLACK, 0);
+         pd = new Polkadot(1);//initializes player1
+         ball = new Ball(100, 100, 0, Color.BLACK, 0);//intializes player1's ammo
          ball.setdx(0);
          ball.setdy(0);
          ball2 = new Ball(100, 100, 0, Color.BLACK, 0);
@@ -60,8 +60,8 @@
             
             
          
-         p2 = new Polkadot(2);
-         ball6 = new Ball(100, 100, 0, Color.BLACK, 0);
+         p2 = new Polkadot(2); //initializes player2
+         ball6 = new Ball(100, 100, 0, Color.BLACK, 0);//initializes player2's ammo
          ball6.setdx(0);
          ball6.setdy(0);
          ball7 = new Ball(100, 100, 0, Color.BLACK, 0);
@@ -309,42 +309,42 @@
 			 
          		
                
-            if(e.getKeyCode() == KeyEvent.VK_UP && pd.getY() > pd.getRadius()){
+            if(e.getKeyCode() == KeyEvent.VK_UP && pd.getY() > pd.getRadius()){//moves tank1 foreward
                 pd.setX(pd.getX()+ Math.sin((double)(pd.getAngle()-1)/64 * (-2 * Math.PI))*(-10));   // move horizontally
          pd.setY(pd.getY()+ Math.cos((double)(pd.getAngle()-1)/64 * (-2 * Math.PI))*(-10)); //move vertically
          }  
-            if(e.getKeyCode() == KeyEvent.VK_DOWN && pd.getY() < FRAME - pd.getRadius()){
+            if(e.getKeyCode() == KeyEvent.VK_DOWN && pd.getY() < FRAME - pd.getRadius()){//moves tank1 backwards
                 pd.setX(pd.getX()+ Math.sin((double)(pd.getAngle()-1)/64 * (-2 * Math.PI))*(10)); // move horizontally
         
          pd.setY(pd.getY()+ Math.cos((double)(pd.getAngle()-1)/64 * (-2 * Math.PI))*(10)); //move vertically
            }
-            if(e.getKeyCode() == KeyEvent.VK_LEFT && pd.getX() > pd.getRadius())
+            if(e.getKeyCode() == KeyEvent.VK_LEFT && pd.getX() > pd.getRadius())//rotates tank1 to the left
                pd.setAngle( pd.getAngle() - 1); 
 
                
-            if(e.getKeyCode() == KeyEvent.VK_RIGHT && pd.getX() < FRAME - pd.getRadius()){
+            if(e.getKeyCode() == KeyEvent.VK_RIGHT && pd.getX() < FRAME - pd.getRadius()){//rotates tank1 to the right
                                pd.setAngle( pd.getAngle() + 1);
                               
                                
                                
             }
             
-            if(e.getKeyCode() == KeyEvent.VK_W && p2.getY() > p2.getRadius()){
+            if(e.getKeyCode() == KeyEvent.VK_W && p2.getY() > p2.getRadius()){ //moves tank2 forewards
                 p2.setX(p2.getX()+ Math.sin((double)(p2.getAngle()-1)/64 * (-2 * Math.PI))*(-10));   // move horizontally
          p2.setY(p2.getY()+ Math.cos((double)(p2.getAngle()-1)/64 * (-2 * Math.PI))*(-10)); //move vertically
          }  
          
-            if(e.getKeyCode() == KeyEvent.VK_S && p2.getY() < FRAME - p2.getRadius()){
+            if(e.getKeyCode() == KeyEvent.VK_S && p2.getY() < FRAME - p2.getRadius()){//moves tank2 backwards
                 p2.setX(p2.getX()+ Math.sin((double)(p2.getAngle()-1)/64 * (-2 * Math.PI))*(10)); // move horizontally
         
-         p2.setY(p2.getY()+ Math.cos((double)(p2.getAngle()-1)/64 * (-2 * Math.PI))*(10)); //move vertically
+         p2.setY(p2.getY()+ Math.cos((double)(p2.getAngle()-1)/64 * (-2 * Math.PI))*(10));//move vertically 
            }
            
-            if(e.getKeyCode() == KeyEvent.VK_A && p2.getX() > p2.getRadius())
+            if(e.getKeyCode() == KeyEvent.VK_A && p2.getX() > p2.getRadius()) //rotates tank2 to the left
                p2.setAngle( p2.getAngle() - 1); 
 
                
-            if(e.getKeyCode() == KeyEvent.VK_D && p2.getX() < FRAME - p2.getRadius()){
+            if(e.getKeyCode() == KeyEvent.VK_D && p2.getX() < FRAME - p2.getRadius()){//rotates tank2 to the right
                                p2.setAngle( p2.getAngle() + 1);
                               
                                
