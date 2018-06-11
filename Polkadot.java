@@ -118,8 +118,8 @@
             if(type == 2) {
             if(getDiameter()!=5 && getDiameter()!=0)
 				{
-				ImageIcon tank = new ImageIcon("tank" + angle + ".png");
-				myBuffer.drawImage(tank.getImage(), (int)getX()-159, (int)getY()-163, null);
+				ImageIcon tank2 = new ImageIcon("tankred" + angle + ".png");
+				myBuffer.drawImage(tank2.getImage(), (int)getX()-159, (int)getY()-163, null);
             buffer = myBuffer;
 				}
 }
