@@ -10,10 +10,10 @@
    private Graphics buffer;
       private double myX;   // x and y coordinates of center
       private double myY;
-      private double myDiameter;
+      private double myDiameter;//size of the tank
       private Color myColor; 
-      private double myRadius;
-      private int myAngle;
+      private double myRadius; 
+      private int myAngle; //angle of tank
       private int type;
      // constructors
       public Polkadot(int x)     //default constructor
@@ -62,11 +62,11 @@
       return myAngle;
       }
    // modifier methods
-      public void setX(double x)
+      public void setX(double x) //moves tanks x coordinate
       {
          myX = x;
       } 
-      public void setY(double y)
+      public void setY(double y) //moves tanks y coordinate
       {
          myY = y;
       } 
@@ -84,12 +84,12 @@
          myRadius = r;
          myDiameter = 2*r;
       }
-      public void setAngle(int a) {
+      public void setAngle(int a) { //changes the angle of tank
       myAngle = a;
-      if (myAngle > 64) {
+      if (myAngle > 64) { //makes sure that angle does not become less than 360
       myAngle = 1;
       }
-      if( myAngle < 1){
+      if( myAngle < 1){ //makes sure that angle does not become less than 0
       myAngle = 64;
       }
       }
@@ -107,7 +107,7 @@
          
          myBuffer.setColor(myColor);
          myBuffer.fillOval((int)(getX() - getRadius()), (int)(getY()-getRadius()), (int)getDiameter(), (int)getDiameter());
-				if(type == 1){
+				if(type == 1){ //player1's tank
             if(getDiameter()!=5 && getDiameter()!=0)
 				{
 				ImageIcon tank = new ImageIcon("tank" + angle + ".png");
@@ -115,7 +115,7 @@
             buffer = myBuffer;
 				}
             }
-            if(type == 2) {
+            if(type == 2) {//player2's tank
             if(getDiameter()!=5 && getDiameter()!=0)
 				{
 				ImageIcon tank = new ImageIcon("tankred" + angle + ".png");
