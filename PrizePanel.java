@@ -107,7 +107,7 @@
             tick = 0;
             }
             
-            if(inputArray[0]){
+            if(inputArray[0]){// executes commands based on if a button is pressed or not
             move(2,p2.getX(),p2.getY(),p2.getAngle(),1);
             }
             if(inputArray[1]){
@@ -144,7 +144,8 @@
             ball5.draw(myBuffer, pd.getAngle());
             pd.draw(myBuffer, pd.getAngle());
             ball.draw(myBuffer, pd.getAngle());
-            collide(ball6, pd);
+	    
+            collide(ball6, pd);//checks if a ball has collided with a tank
             collide(ball7, pd);
             collide(ball8, pd);
             collide(ball9, pd);
@@ -200,7 +201,7 @@
   if(ball.getfirenum()==1)
                {        
 					   ball.setAngle(pd.getAngle());
-                  ball.setX(pd.getX()+170*(Math.sin((pd.getAngle()-1)/64.0 * (2 * Math.PI))));
+                  ball.setX(pd.getX()+170*(Math.sin((pd.getAngle()-1)/64.0 * (2 * Math.PI))));//makes the ball spawn in front of instead of inside the tank.
                   ball.setY(pd.getY()+170*-(Math.cos((pd.getAngle()-1)/64.0 * (2 * Math.PI))));
                   ball.setcount(0);
                   ball.setDiameter(5);
@@ -453,7 +454,7 @@
       {
          return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
       }
-      private void move(int k, double x, double y, int angle, double speed){
+      private void move(int k, double x, double y, int angle, double speed){//this moves the tank, but moves it in the opposite direction if the next position would be in a wall.
 			if(!isInWall(x + Math.sin(Math.toRadians((angle-1)*5.625))*(-speed),y + Math.cos(Math.toRadians((angle-1)*5.625))*(-speed))){
             if(k == 1){
                 pd.setX(x + Math.sin(Math.toRadians((angle-1)*5.625))*(speed));   // move horizontally
@@ -468,7 +469,7 @@
 
                
 		}
-	private boolean isInWall(double x, double y){
+	private boolean isInWall(double x, double y){//this non-functional piece of code checks if a certain position is in the same position of an active wall.
 		for(int k = 0; k < map.getMapData().length; k++){
 			for(int i = 0; x < map.getMapData()[0].length; x++){
 				for(int o = 0; o < 2; o++){
