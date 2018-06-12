@@ -370,25 +370,17 @@
                
             if(e.getKeyCode() == KeyEvent.VK_UP && pd.getY() > pd.getRadius()){//moves tank1 foreward
             inputArray[4] = true;
-             //  move(1,pd.getX(),pd.getY(),pd.getAngle(),10);
-               /* pd.setX(pd.getX()+ Math.sin((double)(pd.getAngle()-1)/64 * (-2 * Math.PI))*(-10));   // move horizontally
-         pd.setY(pd.getY()+ Math.cos((double)(pd.getAngle()-1)/64 * (-2 * Math.PI))*(-10)); //move vertically
-         */}  
+             }  
             if(e.getKeyCode() == KeyEvent.VK_DOWN && pd.getY() < FRAME - pd.getRadius()){//moves tank1 backwards
             inputArray[5] = true;
-            // move(1,pd.getX(),pd.getY(),pd.getAngle(),-10);
-               /* pd.setX(pd.getX()+ Math.sin((double)(pd.getAngle()-1)/64 * (-2 * Math.PI))*(10)); // move horizontally
-        
-         pd.setY(pd.getY()+ Math.cos((double)(pd.getAngle()-1)/64 * (-2 * Math.PI))*(10)); //move vertically
-           */}
+            }
             if(e.getKeyCode() == KeyEvent.VK_LEFT && pd.getX() > pd.getRadius())//rotates tank1 to the left
             inputArray[6] = true;
-              // pd.setAngle( pd.getAngle() - 1); 
 
                
             if(e.getKeyCode() == KeyEvent.VK_RIGHT && pd.getX() < FRAME - pd.getRadius()){//rotates tank1 to the right
             inputArray[7] = true;
-                             //  pd.setAngle( pd.getAngle() + 1);
+                            
                               
                                
                                
@@ -396,27 +388,20 @@
             
             if(e.getKeyCode() == KeyEvent.VK_W && p2.getY() > p2.getRadius()){ //moves tank2 forewards
             inputArray[0] = true;
-            //move(2,p2.getX(),p2.getY(),p2.getAngle(),10);
-               /* p2.setX(p2.getX()+ Math.sin((double)(p2.getAngle()-1)/64 * (-2 * Math.PI))*(-10));   // move horizontally
-         p2.setY(p2.getY()+ Math.cos((double)(p2.getAngle()-1)/64 * (-2 * Math.PI))*(-10)); //move vertically
-        */ }  
+             }  
          
             if(e.getKeyCode() == KeyEvent.VK_S && p2.getY() < FRAME - p2.getRadius()){//moves tank2 backwards
             inputArray[1] = true;
-            //move(2,p2.getX(),p2.getY(),p2.getAngle(),-10);
-                /*p2.setX(p2.getX()+ Math.sin((double)(p2.getAngle()-1)/64 * (-2 * Math.PI))*(10)); // move horizontally
-        
-         p2.setY(p2.getY()+ Math.cos((double)(p2.getAngle()-1)/64 * (-2 * Math.PI))*(10));//move vertically 
-           */}
+            }
            
             if(e.getKeyCode() == KeyEvent.VK_A && p2.getX() > p2.getRadius()) //rotates tank2 to the left
             inputArray[2] = true;
-              // p2.setAngle( p2.getAngle() - 1); 
+               
 
                
             if(e.getKeyCode() == KeyEvent.VK_D && p2.getX() < FRAME - p2.getRadius()){//rotates tank2 to the right
             inputArray[3] = true;
-                              // p2.setAngle( p2.getAngle() + 1);
+                              
                               
                                
                                
@@ -426,25 +411,16 @@
       public void keyReleased(KeyEvent e){
        if(e.getKeyCode() == KeyEvent.VK_UP && pd.getY() > pd.getRadius()){//moves tank1 foreward
             inputArray[4] = false;
-             //  move(1,pd.getX(),pd.getY(),pd.getAngle(),10);
-               /* pd.setX(pd.getX()+ Math.sin((double)(pd.getAngle()-1)/64 * (-2 * Math.PI))*(-10));   // move horizontally
-         pd.setY(pd.getY()+ Math.cos((double)(pd.getAngle()-1)/64 * (-2 * Math.PI))*(-10)); //move vertically
-         */}  
+             }  
             if(e.getKeyCode() == KeyEvent.VK_DOWN && pd.getY() < FRAME - pd.getRadius()){//moves tank1 backwards
             inputArray[5] = false;
-            // move(1,pd.getX(),pd.getY(),pd.getAngle(),-10);
-               /* pd.setX(pd.getX()+ Math.sin((double)(pd.getAngle()-1)/64 * (-2 * Math.PI))*(10)); // move horizontally
-        
-         pd.setY(pd.getY()+ Math.cos((double)(pd.getAngle()-1)/64 * (-2 * Math.PI))*(10)); //move vertically
-           */}
+            }
             if(e.getKeyCode() == KeyEvent.VK_LEFT && pd.getX() > pd.getRadius())//rotates tank1 to the left
             inputArray[6] = false;
-              // pd.setAngle( pd.getAngle() - 1); 
-
-               
+              
             if(e.getKeyCode() == KeyEvent.VK_RIGHT && pd.getX() < FRAME - pd.getRadius()){//rotates tank1 to the right
             inputArray[7] = false;
-                             //  pd.setAngle( pd.getAngle() + 1);
+                             
                               
                                
                                
@@ -452,27 +428,18 @@
             
             if(e.getKeyCode() == KeyEvent.VK_W && p2.getY() > p2.getRadius()){ //moves tank2 forewards
             inputArray[0] = false;
-            //move(2,p2.getX(),p2.getY(),p2.getAngle(),10);
-               /* p2.setX(p2.getX()+ Math.sin((double)(p2.getAngle()-1)/64 * (-2 * Math.PI))*(-10));   // move horizontally
-         p2.setY(p2.getY()+ Math.cos((double)(p2.getAngle()-1)/64 * (-2 * Math.PI))*(-10)); //move vertically
-        */ }  
+             }  
          
             if(e.getKeyCode() == KeyEvent.VK_S && p2.getY() < FRAME - p2.getRadius()){//moves tank2 backwards
             inputArray[1] = false;
-            //move(2,p2.getX(),p2.getY(),p2.getAngle(),-10);
-                /*p2.setX(p2.getX()+ Math.sin((double)(p2.getAngle()-1)/64 * (-2 * Math.PI))*(10)); // move horizontally
-        
-         p2.setY(p2.getY()+ Math.cos((double)(p2.getAngle()-1)/64 * (-2 * Math.PI))*(10));//move vertically 
-           */}
+            }
            
             if(e.getKeyCode() == KeyEvent.VK_A && p2.getX() > p2.getRadius()) //rotates tank2 to the left
             inputArray[2] = false;
-              // p2.setAngle( p2.getAngle() - 1); 
-
                
             if(e.getKeyCode() == KeyEvent.VK_D && p2.getX() < FRAME - p2.getRadius()){//rotates tank2 to the right
             inputArray[3] = false;
-                              // p2.setAngle( p2.getAngle() + 1);
+                             
                               
                             
       }
