@@ -490,10 +490,10 @@
 		}
 		return false;
 	}
-    private void collide(Ball b, Polkadot p)
+    private void collide(Ball b, Polkadot p)//takes a ball and a tank, and checks if they occupy the same position. Sets a tank to a random position on the map if they do.
       {
          double d = distance(b.getX(), b.getY(), p.getX(), p.getY());
-         if( d <= b.getRadius() + p.getRadius())
+         if( d <= b.getRadius() + p.getRadius() + 20)
          {
             p.addScore();
             p.jump(400, 400);
