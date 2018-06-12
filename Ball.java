@@ -1,6 +1,7 @@
 //Kevin, Chris, Andrew
 //6-12-18
 //Period 5 
+//This class contains information about the balls the tanks shoot.
 import java.awt.*;
    public class Ball extends Polkadot
    {
