@@ -1,4 +1,7 @@
- import java.awt.*;
+//Kevin, Chris, Andrew
+//6-12-18
+//Period 5 
+import java.awt.*;
    public class Ball extends Polkadot
    {
       private double dx;       // pixels to move each time step() is called.
