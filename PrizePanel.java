@@ -1,4 +1,6 @@
-	 //Name:    Date:
+//Kevin, Chris, Andrew
+//6-12-18
+//Period 5	
    import javax.swing.*;
    import java.awt.*;
    import java.awt.event.*;
