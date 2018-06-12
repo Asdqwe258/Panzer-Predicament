@@ -9,7 +9,12 @@
          frame.setSize(1280, 1025);    //makes the mouse location correct
          frame.setLocation(0, 0);
          frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-         PrizePanel p = new PrizePanel();
+         Map map = new Map(6,6);
+         map.generateBarrier(2,1,0);
+         map.generateBarrier(2,2,0);
+         map.generateBarrier(2,2,1);
+         map.generateBarrier(2,3,0);
+         PrizePanel p = new PrizePanel(map);
          frame.setContentPane(p);
          p.requestFocus();
          frame.setVisible(true);

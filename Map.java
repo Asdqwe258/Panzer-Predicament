@@ -1,5 +1,5 @@
 public class Map {
-	private static boolean[][][] MAP_DATA;
+	private static boolean[][][] MAP_DATA;//x, y, 0=vertical 1=horizontal
 	private static int PLAYER_1_SPAWNX;
 	private static int PLAYER_1_SPAWNY;
 	private static int PLAYER_2_SPAWNX;
