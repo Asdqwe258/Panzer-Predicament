@@ -1,7 +1,7 @@
 //Kevin, Chris, Andrew
 //6-12-18
 //Period 5
-
+// This class launches the game.
    import javax.swing.JFrame;
     public class Driver17
    {
