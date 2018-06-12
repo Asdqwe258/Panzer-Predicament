@@ -1,6 +1,7 @@
 //Kevin, Chris, Andrew
 //6-12-18
-//Period 5	
+//Period 5
+//This class is the main driver of the game, it is responsible for making everything move and interact.
    import javax.swing.*;
    import java.awt.*;
    import java.awt.event.*;
