@@ -141,7 +141,27 @@
             ball5.draw(myBuffer, pd.getAngle());
             pd.draw(myBuffer, pd.getAngle());
             ball.draw(myBuffer, pd.getAngle());
-            
+            collide(ball6, pd);
+            collide(ball7, pd);
+            collide(ball8, pd);
+            collide(ball9, pd);
+            collide(ball10, pd);
+            collide(ball, p2);
+            collide(ball2, p2);
+            collide(ball3, p2);
+            collide(ball4, p2);
+            collide(ball5, p2);
+            collide(ball, pd);
+            collide(ball2, pd);
+            collide(ball3, pd);
+            collide(ball4, pd);
+            collide(ball5, pd);
+            collide(ball6, p2);
+            collide(ball7, p2);
+            collide(ball8, p2);
+            collide(ball9, p2);
+            collide(ball10, p2);
+
             ball6.move(FRAME, FRAME);
             ball7.move(FRAME, FRAME);
             ball8.move(FRAME, FRAME);
@@ -157,8 +177,12 @@
             ball6.draw(myBuffer, pd.getAngle());
             myBuffer.setColor(Color.BLACK);
 
-            myBuffer.setFont(new Font("Monospaced", Font.BOLD, 24));
-            myBuffer.drawString("Count: " + hits, FRAME - 150, 25);
+            
+             myBuffer.setFont(new Font("Monospaced", Font.BOLD, 50));
+            myBuffer.drawString("Player 1: " + pd.getScore(), FRAME - 400, 120);
+            myBuffer.drawString("Player 2: " + p2.getScore(), 25 , 120);
+
+            
             repaint();
          }
       }   
@@ -173,8 +197,8 @@
   if(ball.getfirenum()==1)
                {        
 					   ball.setAngle(pd.getAngle());
-                  ball.setX(pd.getX());
-                  ball.setY(pd.getY());
+                  ball.setX(pd.getX()+170*(Math.sin((pd.getAngle()-1)/64.0 * (2 * Math.PI))));
+                  ball.setY(pd.getY()+170*-(Math.cos((pd.getAngle()-1)/64.0 * (2 * Math.PI))));
                   ball.setcount(0);
                   ball.setDiameter(5);
                   ball.setdy((-2)*(Math.cos((pd.getAngle()-1)/64.0 * (2 * Math.PI))));
@@ -189,11 +213,11 @@
                {   
 					   
                   ball2.setAngle(pd.getAngle());
-                  ball2.setX(pd.getX());
-                  ball2.setY(pd.getY());
+                  ball2.setX(pd.getX()+170*(Math.sin((pd.getAngle()-1)/64.0 * (2 * Math.PI))));
+                  ball2.setY(pd.getY()+170*-(Math.cos((pd.getAngle()-1)/64.0 * (2 * Math.PI))));
                   ball2.setcount(0);
                   ball2.setDiameter(5);
-                  ball2.setdy((-2)*(Math.cos((pd.getAngle()-1)/64.0 * (2 * Math.PI))));
+                  ball2.setdy((-2));
 						System.out.println(ball2.getdy());
 						System.out.println((Math.cos((pd.getAngle()-1)/64.0 * (2 * Math.PI))));
 						ball2.setdx((2)*((Math.sin((pd.getAngle()-1)/64.0 * (2 * Math.PI)))));
@@ -205,8 +229,8 @@
                else if(ball3.getfirenum()==1)
                {  
                   ball3.setAngle(pd.getAngle());
-                  ball3.setX(pd.getX());
-                  ball3.setY(pd.getY());
+                  ball3.setX(pd.getX()+170*(Math.sin((pd.getAngle()-1)/64.0 * (2 * Math.PI))));
+                  ball3.setY(pd.getY()+170*-(Math.cos((pd.getAngle()-1)/64.0 * (2 * Math.PI))));
                   ball3.setcount(0);
                   ball3.setDiameter(5);
                   ball3.setdy((-2)*(Math.cos((pd.getAngle()-1)/64.0 * (2 * Math.PI))));
@@ -222,8 +246,8 @@
                else if(ball4.getfirenum()==1)
                {                   
                   ball4.setAngle(pd.getAngle());
-                  ball4.setX(pd.getX());
-                  ball4.setY(pd.getY());
+                  ball4.setX(pd.getX()+170*(Math.sin((pd.getAngle()-1)/64.0 * (2 * Math.PI))));
+                  ball4.setY(pd.getY()+170*-(Math.cos((pd.getAngle()-1)/64.0 * (2 * Math.PI))));
                   ball4.setcount(0);
                   ball4.setDiameter(5);
                   ball4.setdy((-2)*(Math.cos((pd.getAngle()-1)/64.0 * (2 * Math.PI))));
@@ -238,8 +262,8 @@
                else if(ball5.getfirenum()==1)
                { 
                   ball5.setAngle(pd.getAngle());
-                  ball5.setX(pd.getX());
-                  ball5.setY(pd.getY());
+                  ball5.setX(pd.getX()+170*(Math.sin((pd.getAngle()-1)/64.0 * (2 * Math.PI))));
+                  ball5.setY(pd.getY()+170*-(Math.cos((pd.getAngle()-1)/64.0 * (2 * Math.PI))));
                   ball5.setcount(0);
                   ball5.setDiameter(5);
                   ball5.setdy((-2)*(Math.cos((pd.getAngle()-1)/64.0 * (2 * Math.PI))));
@@ -257,8 +281,8 @@
   if(ball6.getfirenum()==1)
                {        
 					   ball6.setAngle(p2.getAngle());
-                  ball6.setX(p2.getX());
-                  ball6.setY(p2.getY());
+                  ball6.setX(p2.getX()+170*(Math.sin((pd.getAngle()-1)/64.0 * (2 * Math.PI))));
+                  ball6.setY(p2.getY()+170*-(Math.cos((pd.getAngle()-1)/64.0 * (2 * Math.PI))));
                   ball6.setcount(0);
                   ball6.setDiameter(5);
                   ball6.setdy((-2)*(Math.cos((p2.getAngle()-1)/64.0 * (2 * Math.PI))));
@@ -273,8 +297,8 @@
                {   
 					   
                   ball7.setAngle(p2.getAngle());
-                  ball7.setX(p2.getX());
-                  ball7.setY(p2.getY());
+                  ball7.setX(p2.getX()+170*(Math.sin((pd.getAngle()-1)/64.0 * (2 * Math.PI))));
+                  ball7.setY(p2.getY()+170*-(Math.cos((pd.getAngle()-1)/64.0 * (2 * Math.PI))));
                   ball7.setcount(0);
                   ball7.setDiameter(5);
                   ball7.setdy((-2)*(Math.cos((p2.getAngle()-1)/64.0 * (2 * Math.PI))));
@@ -288,8 +312,8 @@
                else if(ball8.getfirenum()==1)
                {  
                   ball8.setAngle(p2.getAngle());
-                  ball8.setX(p2.getX());
-                  ball8.setY(p2.getY());
+                  ball8.setX(p2.getX()+170*(Math.sin((pd.getAngle()-1)/64.0 * (2 * Math.PI))));
+                  ball8.setY(p2.getY()+170*-(Math.cos((pd.getAngle()-1)/64.0 * (2 * Math.PI))));
                   ball8.setcount(0);
                   ball8.setDiameter(5);
                   ball8.setdy((-2)*(Math.cos((p2.getAngle()-1)/64.0 * (2 * Math.PI))));
@@ -304,8 +328,8 @@
                else if(ball9.getfirenum()==1)
                {                   
                   ball9.setAngle(p2.getAngle());
-                  ball9.setX(p2.getX());
-                  ball9.setY(p2.getY());
+                  ball9.setX(p2.getX()+170*(Math.sin((pd.getAngle()-1)/64.0 * (2 * Math.PI))));
+                  ball9.setY(p2.getY()+170*-(Math.cos((pd.getAngle()-1)/64.0 * (2 * Math.PI))));
                   ball9.setcount(0);
                   ball9.setDiameter(5);
                   ball9.setdy((-2)*(Math.cos((p2.getAngle()-1)/64.0 * (2 * Math.PI))));
@@ -320,8 +344,8 @@
                else if(ball10.getfirenum()==1)
                { 
                   ball10.setAngle(p2.getAngle());
-                  ball10.setX(p2.getX());
-                  ball10.setY(p2.getY());
+                  ball10.setX(p2.getX()+170*(Math.sin((pd.getAngle()-1)/64.0 * (2 * Math.PI))));
+                  ball10.setY(p2.getY()+170*-(Math.cos((pd.getAngle()-1)/64.0 * (2 * Math.PI))));
                   ball10.setcount(0);
                   ball10.setDiameter(5);
                   ball10.setdy((-2)*(Math.cos((p2.getAngle()-1)/64.0 * (2 * Math.PI))));
@@ -495,5 +519,19 @@
 		}
 		return false;
 	}
+    private void collide(Ball b, Polkadot p)
+      {
+         double d = distance(b.getX(), b.getY(), p.getX(), p.getY());
+         if( d <= b.getRadius() + p.getRadius())
+         {
+            p.addScore();
+            p.jump(400, 400);
+            hits += 1;
+         }  
+      }
+
+
+            
+  
 
    }

@@ -14,13 +14,13 @@
       private Color myColor; 
       private double myRadius; 
       private int myAngle; //angle of tank
-      private int type;
+      private int type, score;
      // constructors
       public Polkadot(int x)     //default constructor
       {
-         myX = 200;
-         myY = 200;
-         myDiameter = 25;
+         myX = Math.random() *1400;
+         myY = Math.random() *1400;
+         myDiameter = 200;
          myColor = Color.RED;
          myRadius = myDiameter/2;
          myAngle = 1;
@@ -83,6 +83,14 @@
       {
          myRadius = r;
          myDiameter = 2*r;
+      }
+      public void addScore()
+      {
+      score++;
+      }
+      public int getScore()
+      {
+      return score;
       }
       public void setAngle(int a) { //changes the angle of tank
       myAngle = a;
