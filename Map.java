@@ -1,3 +1,6 @@
+//Kevin, Chris, Andrew
+//6-12-18
+//Period 5
 public class Map {
 	private static boolean[][][] MAP_DATA;//x, y, 0=vertical 1=horizontal
 	private static int PLAYER_1_SPAWNX;
