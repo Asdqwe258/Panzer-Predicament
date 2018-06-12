@@ -1,7 +1,7 @@
 //Kevin, Chris, Andrew
 //6-12-18
 //Period 5
-
+//This class contains the information for the tanks and makes them behave correctly
    import java.awt.*;
   import javax.swing.*;
 
