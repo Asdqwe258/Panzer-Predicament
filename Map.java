@@ -1,6 +1,7 @@
 //Kevin, Chris, Andrew
 //6-12-18
 //Period 5
+//This class contains the Map data, although it is largely unused due to us not finishing the walls.
 public class Map {
 	private static boolean[][][] MAP_DATA;//x, y, 0=vertical 1=horizontal
 	private static int PLAYER_1_SPAWNX;
